@@ -54,6 +54,8 @@ group :development, :test do
 
   gem 'rspec-rails'
 
+  gem 'factory_bot_rails'
+
 end
 
 group :development do
@@ -68,4 +70,10 @@ group :development do
 
   gem 'spring-commands-rspec'
 
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdriver'
 end
