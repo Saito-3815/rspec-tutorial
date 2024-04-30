@@ -63,7 +63,12 @@ RSpec.configure do |config|
 
   config.before(:each, type: :system) do
     # driven_by(:selenium_chrome_headless)
-    driven_by(:selenium_chrome)
+    # driven_by(:selenium_chrome)
     # driven_by(:rack_test)
+    if ENV['WITHHEAD'].present?
+      driven_by(:selenium_chrome)
+    else
+      driven_by(:selenium_chrome_headless)
+    end
   end
 end
